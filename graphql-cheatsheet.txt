@@ -1,0 +1,11 @@
+{ posts { id } }
+
+mutation { 
+  createPost(title: "Dummy", content: "Just for testing", summary: "Nothing interesting", category_id: 1) {
+    title,
+    content,
+    summary,
+    category_id
+  }
+}
+

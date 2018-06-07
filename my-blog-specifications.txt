@@ -1,0 +1,14 @@
+thiết kế pm my-blog:
+
+- DBs (postgres): (xem data.sql)
+
+- Functions:
++ View (query) categories, posts, comments
++ Create post, comment
++ Manage number of posts, comments
++ View feedbacks
+
+- Requirements:
++ Unit test run
++ Dùng server API GraphQL, Postgres, client Angular
++ Chọn theme giao diện đen hoặc trắng

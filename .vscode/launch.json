@@ -1,0 +1,27 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug",
+      "console": "externalTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "cwd": "${workspaceRoot}",
+      // there is something wrong with npx and ts-node that it will require src/package.json file if not using -c option
+      "runtimeExecutable": "node",
+      "args": [
+        "-r",
+        "ts-node/register",
+        "--inspect-brk=9229",
+        "src/index.ts"
+      ],
+      "restart": true,
+      "protocol": "inspector",
+      "port": 9229
+    }
+  ]
+}
