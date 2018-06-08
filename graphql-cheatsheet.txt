@@ -1,11 +1,11 @@
-{ posts { id } }
+{ posts { id, title } }
+{ post(id: 2) { id, title } }
 
 mutation { 
-  createPost(title: "Dummy", content: "Just for testing", summary: "Nothing interesting", category_id: 1) {
-    title,
-    content,
-    summary,
-    category_id
+  createPost(title: "Dummy", content: "Just for testing",
+  summary: "Nothing interesting", category_id: 1) {
+    id, title, content, summary, category, category_id
   }
 }
 
+mutation { removePost(id: 1) }

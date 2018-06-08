@@ -1,10 +1,15 @@
 import { dbConfig } from '../config'
-import knex from 'knex'
+import k from 'knex'
 
-const db = knex(dbConfig)
+export const knex = k(dbConfig)
 
-export const Posts = db('posts')
-export const Categories = db('categories')
-export const Users = db('users')
-export const Feedbacks = db('feedbacks')
-export const Events = db('events')
+// exports = module.exports = {
+//   get Posts()  { return db('posts') } 
+// }
+
+export const Posts = knex('posts')
+export const Categories = knex('categories')
+export const Comments = knex('Comments')
+export const Users = knex('users')
+export const Feedbacks = knex('feedbacks')
+export const Events = knex('events')

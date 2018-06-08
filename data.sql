@@ -6,17 +6,15 @@ create table categories (
 );
 create table posts (
   id serial primary key,
-  category_id int not null,
+  category_id int not null references categories(id),
   title varchar not null,
   summary varchar,
-  content varchar not null,
-  foreign key (category_id) references categories(id)
+  content varchar not null
 );
 create table comments (
   id serial primary key,
-  post_id int not null,
-  content varchar not null,
-  foreign key (post_id) references posts(id)
+  post_id int not null references posts(id),
+  content varchar not null
 );
 create table users (
   id serial primary key,

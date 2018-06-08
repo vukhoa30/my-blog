@@ -8,7 +8,10 @@ type Post {
 }
 
 type Query {
-  posts: [Post]
+  posts(offset: Int, limit: Int): [Post]
+  post(id: ID!, offset: Int, limit: Int): Post
+  postsByCategory(category_id: Int!, offset: Int, limit: Int): [Post]
+  postsByTitle(title: String!, offset: Int, limit: Int): [Post]
 }
 
 type Mutation {

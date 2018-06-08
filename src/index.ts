@@ -42,7 +42,7 @@ import { enableGraphql, enableGraphiql } from './graphql'
 
   enableGraphql('/graphql', app)
 
-  server.listen(3000, () => {
-    console.log('Listening at port 3000')
+  server.listen(3003, () => {
+    console.log('Listening at port 3003')
   })
 })()

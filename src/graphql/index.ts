@@ -32,7 +32,7 @@ export function enableGraphiql(at: string, app: Express, opts: {
   app.use(at, graphiqlExpress({
     endpointURL: opts.endpoint,
     subscriptionsEndpoint: opts.subscription,
-    passHeader: '"Authorization": `bearer ${JSON.parse(localStorage["qas.login"]).token}`,\
-    "x-qtest-url": JSON.parse(localStorage["qas.login"]).url'
+    // passHeader: '"Authorization": `bearer ${JSON.parse(localStorage["qas.login"]).token}`,\
+    // "x-qtest-url": JSON.parse(localStorage["qas.login"]).url'
   }) as RequestHandler)
 }
